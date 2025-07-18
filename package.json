@@ -1,0 +1,17 @@
+{
+  "name": "locatework",
+  "version": "1.0.0",
+  "description": "사용자 위치 기반 출근, 출석 확인 서비스",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,7 @@
+# LocateWork Project gitignore
+
+# 의존성
+node_modules/
+
+# dotenv
+.env
