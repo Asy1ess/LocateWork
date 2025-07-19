@@ -1,12 +1,27 @@
 const express = require('express');
+const session = require('express-session');
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT;
 
-app.get('/', (req, res) => {
-  res.send('Welcome to LocateWork Service');
-});
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: false
+}));
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+const indexRouter = require('./routes/index');
+const authRouter  = require('./routes/auth');
+
+app.use('/', indexRouter);
+app.use('/', authRouter);
 
 app.use((err, req, res, next) => {
   const status = err.status || 500;
