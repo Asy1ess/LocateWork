@@ -8,9 +8,9 @@
 - 사용자 위치 기능
 
 # 개발 언어 및 활용 기술
-- Node.JS
-- 
+- Backend: Node.js
+- Template Engine: ejs
+- DataBase: MongoDB
 
 # 제작기간
-
 - 2025.07.18 ~ 진행중

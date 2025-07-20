@@ -1,5 +1,6 @@
 const express = require('express');
 const session = require('express-session');
+const expressLayouts = require('express-ejs-layouts');
 require('dotenv').config();
 
 const app = express();
@@ -7,6 +8,9 @@ const PORT = process.env.PORT;
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+app.use(expressLayouts);
+app.set('layout', 'layout');
 
 app.use(session({
   secret: process.env.SECRET,
