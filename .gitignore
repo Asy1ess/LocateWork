@@ -5,3 +5,6 @@ node_modules/
 
 # dotenv
 .env
+
+# MongoDB 관련 파일
+mongoDB/
